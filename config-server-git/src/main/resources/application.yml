@@ -1,0 +1,29 @@
+server:
+  port: 12000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:7001/eureka/,http://peer2:7002/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+    config:
+      server:
+        git:
+          uri: https://github.com/HolyDogs/myFileReposity
+          search-paths: config-repo
+
+

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: eureka-server
+server:
+  port: 7002
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    register-with-eureka: false #标记为服务端
+    fetch-registry: false #标记为服务端
+    service-url:
+      defaultZone: http://peer1:7001/eureka/

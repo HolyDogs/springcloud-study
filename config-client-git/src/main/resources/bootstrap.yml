@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:12000
+      name: config-client
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+#加载优先于application.yml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:7001/eureka/,http://peer2:7002/eureka/

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: zuul-gateway
+server:
+  port: 13333
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:7001/eureka/,http://peer2:7002/eureka/
+zuul:
+  routes:
+    EUREKA-PRODUCER: /api-a/**
+    EUREKA-CONSUMER-9001: /api-b/**

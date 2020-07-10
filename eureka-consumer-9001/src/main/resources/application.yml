@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: eureka-consumer-9001
+server:
+  port: 9001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:7001/eureka/,http://peer2:7002/eureka/
+feign:
+  hystrix:
+    enabled: true #¿ªÆôÈÛ¶ÏÆ÷

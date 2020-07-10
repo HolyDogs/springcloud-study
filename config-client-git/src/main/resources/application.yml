@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-git
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+
+server:
+  port: 13000

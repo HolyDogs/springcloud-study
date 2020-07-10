@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: eureka-producer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:7001/eureka/,http://peer2:7002/eureka/
+  instance:
+    instance-id: eureka-producer8003
+    prefer-ip-address: true
+server:
+  port: 8003
+
